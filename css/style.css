@@ -1,0 +1,284 @@
+:root {
+  --color-white: #fff;
+  --color-black: #333;
+}  
+  
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: 'Open-Sans', 'Muller', 'PlayfairDisplay', sans-serif;
+  background-color: #999999;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Open Sans SemiBold', sans-serif;
+  /*Общий шрифт 600*/
+  font-size: 16px;
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus {
+  outline: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.menu-media {
+  display: none;
+}
+
+.burger {
+  background: none;
+  border: none;
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: var(--color-white);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.menu-container {
+  padding-top: 34px;
+  padding-bottom: 60px;
+}
+
+.menu-320__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.menu-close {
+  border: none;
+  background: none;
+  margin-bottom: 34px;
+}
+
+.menu-close__svg {
+  fill: #A65CF0;
+}
+
+.menu-content {
+  position: relative;
+}
+
+.menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 47%;
+}
+
+.menu-320 {
+  display: none;
+}
+
+.menu-list:not(:last-child) {
+  margin-bottom: 41px;
+}
+
+.menu-item:not(:last-child) {
+  margin-bottom: 41px;
+}
+
+.menu-320__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.menu-link {
+  position: relative;
+  font-family: 'Open-Sans';
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-black);
+  z-index: 1;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.menu-link:focus::after {
+  background-color: #EBD1FF;
+  z-index: -1;
+}
+
+.menu-link:focus {
+  color: #7033AC;
+}
+
+.menu-link:hover {
+  color: #A65CF0;
+}
+
+.menu-link:active {
+  color: #7033AC;
+}
+
+.menu-link:active::after {
+  background: none;
+}
+
+.menu-link::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -8px;
+  right: -8px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.menu-320__link {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  position: relative;
+  font-family: 'Open-Sans';
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  font-style: normal;
+  color: #999999;
+}
+
+.menu-320__link:focus::after {
+  background-color: #EBD1FF;
+  z-index: -1;
+}
+
+.menu-320__link:focus {
+  color: #7033AC;
+}
+
+.menu-320__link:hover {
+  color: #A65CF0;
+}
+
+.menu-320__link:active {
+  color: #7033AC;
+}
+
+.menu-320__link:active::after {
+  background: none;
+}
+
+.menu-320__link::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.menu-img {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+@media (max-width: 890px) {
+  .menu-media {
+    display: block;
+  }
+}
+
+@media (max-width: 661px) {
+  .menu-media {
+    padding-top: 3px;
+    padding-left: 4px;
+  }  
+  
+  .menu-container {
+    padding-bottom: 26px;
+  }
+
+  .menu-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-320 {
+    display: block;
+    background-color: #F7F7F7;
+  }
+
+  .menu-img {
+    display: none;
+  }
+}
