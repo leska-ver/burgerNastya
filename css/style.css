@@ -249,6 +249,13 @@ button {
   top: 20px;
 }
 
+
+.hero {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
 @media (max-width: 890px) {
   .menu-media {
     display: block;
